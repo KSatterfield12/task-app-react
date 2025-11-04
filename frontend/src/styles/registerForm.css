@@ -1,0 +1,106 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Register page wrapper */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Register form container */
+.login-form {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 450px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.login-form button {
+  padding: 0.75rem;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #555;
+}
+
+/* Secondary button (Back to Login) */
+.login-form button[type="button"] {
+  background-color: #ccc;
+  color: #333;
+}
+
+.login-form button[type="button"]:hover {
+  background-color: #bbb;
+}
+
+/* Success message */
+.success-message {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  padding: 0.5em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Footer styles */
+.login-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 425px) {
+  .login-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

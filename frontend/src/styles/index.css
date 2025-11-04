@@ -1,0 +1,357 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  line-height: 1.6;
+}
+
+/* Dark mode base */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  background-color: inherit;
+}
+
+/* Header (light mode) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  font-size: 22px;
+}
+
+/* Header (dark mode) */
+body.dark-mode header {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* Logo */
+.header-left .header-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+/* Left section: logo + nav */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+body.dark-mode nav a {
+  color: #f0f0f0;
+}
+
+body.dark-mode nav a:hover {
+  color: #bbb;
+}
+
+/* Right section: logout + theme buttons */
+.header-right {
+  margin-left: auto;
+}
+
+.logout-button,
+.theme-toggle-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.logout-button {
+  background-color: #d11a2a;
+}
+
+.logout-button:hover {
+  background-color: #a00;
+}
+
+.theme-toggle-button {
+  background-color: #666;
+  color: #f0f0f0;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background-color: #444;
+}
+
+body.dark-mode .theme-toggle-button {
+  background-color: #555;
+}
+
+body.dark-mode .theme-toggle-button:hover {
+  background-color: #666;
+}
+
+body.dark-mode .logout-button {
+  background-color: #800;
+}
+
+body.dark-mode .logout-button:hover {
+  background-color: #a00;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-left {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .header-right {
+    align-self: flex-end;
+  }
+}
+
+/* Main content */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: inherit;
+}
+
+main:has(.home-intro) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 2rem;
+}
+
+body.dark-mode main {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Home intro section */
+.home-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-divider {
+  width: 80%;
+  max-width: 500px;
+  height: 3px;
+  background-color: #666;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+body.dark-mode .home-divider {
+  background-color: #f0f0f0;
+}
+
+.home-intro h3 {
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.home-intro h4 {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  color: #555;
+}
+
+body.dark-mode .home-intro h4 {
+  color: #ccc;
+}
+
+/* Chore Icons */
+.chore-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.chore-icons img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.chore-icons img:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .chore-icons img {
+  filter: brightness(0.85);
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.controls input[type="text"] {
+  padding: 0.5rem;
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #005fa3;
+}
+
+body.dark-mode .controls input[type="text"] {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark-mode .controls button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+body.dark-mode .controls button:hover {
+  background-color: #666;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #666;
+  color: #000;
+  font-size: 1rem;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* Auto-logout styles */
+.inactivity-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  }
+
+/* Smooth transitions */
+body,
+header,
+main,
+footer,
+.container {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Responsive layout */
+@media (max-width: 425px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ }

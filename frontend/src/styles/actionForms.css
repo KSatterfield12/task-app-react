@@ -1,0 +1,88 @@
+/* Form container */
+.task-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Headings */
+.task-form h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Labels and Inputs */
+.task-form label {
+   display: block;
+   margin-bottom: 0.25rem;
+   font-weight: 500;
+   color: #444;
+}
+
+.task-form input[type="text"],
+.task-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Buttons */
+.task-right button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-right button:hover {
+  background-color: #2980b9;
+}
+
+/* Form */
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form-field input,
+.form-field textarea {
+  margin-bottom: 0; /* prevent double spacing */
+}
+
+/* Messages */
+.success-message {
+  color: #2e7d32;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #c62828;
+  font-weight: 500;
+  margin-top: 1rem;
+}

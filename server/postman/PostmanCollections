@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "Task List API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/auth/login",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["auth", "login"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"username\": \"kami\", \"password\": \"\" }",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "View All Tasks",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/tasks/view",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks", "view"]
+        }
+      }
+    },
+    {
+      "name": "View Task",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{authToken}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks", "{{taskId}}"]
+        }
+      }
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{authToken}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/tasks",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"Do laundry\", \"description\": \"Fold towels\", \"completed\": false }",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Update Task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{authToken}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks", "{{taskId}}"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"id\": \"{{taskId}}\", \"title\": \"Updated Title\", \"description\": \"Updated description\", \"completed\": false }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+    {
+      "name": "Complete Task",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{authToken}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/tasks/{{taskId}}/complete",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks", "{{taskId}}", "complete"]
+        }
+      }
+    },
+    {
+      "name": "Delete Task",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{authToken}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/tasks/{{taskId}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tasks", "{{taskId}}"]
+        }
+      }
+    }
+  ]
+}

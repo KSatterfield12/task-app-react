@@ -91,8 +91,15 @@ export default function RegisterForm({ onRegister }) {
         />
 
         <button type="submit">Register</button>
-        <button type="button" onClick={onRegister}>Back to Login</button>
       </form>
+
+      <button
+        type="button"
+        onClick={onRegister}
+        className="back-to-login"
+      >
+        Back to Login
+      </button>
 
       <footer className="login-footer">
         <p>&copy; 2025 Kami Satterfield. All rights reserved.</p>

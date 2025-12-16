@@ -15,7 +15,7 @@ export default function LoginForm({ onLogin }) {
       const { token } = await login(username, password);
       onLogin(token);
     } catch (err) {
-      setError("Username or password is incorrect.\n Please try again.");
+      setError("Username or password is incorrect.\nPlease try again.");
     }
   };
 
@@ -29,9 +29,10 @@ export default function LoginForm({ onLogin }) {
     <div className="login-page">
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Task List App Login</h2>
+
         {error && (
           <p className="error-message">
-            {error.split('\n').map((line, index) => (
+            {error.split("\n").map((line, index) => (
               <span key={index}>
                 {line}
                 <br />
@@ -39,33 +40,37 @@ export default function LoginForm({ onLogin }) {
             ))}
           </p>
         )}
+
         <input
           type="text"
           placeholder="Username"
           value={username}
-          onChange={e => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
+
         <button type="submit">Login</button>
       </form>
 
-      <div className="register-prompt">
-        <p>New here?</p>
-        <button className="register-button" onClick={() => setShowRegister(true)}>
-          Create Account
-        </button>
-      </div>
+      {/* Switch to Register form */}
+      <button
+        type="button"
+        onClick={() => setShowRegister(true)}
+        className="back-to-login"
+      >
+        Create Account
+      </button>
 
       <footer className="login-footer">
         <p>&copy; 2025 Kami Satterfield. All rights reserved.</p>
       </footer>
     </div>
   );
-  }
+}

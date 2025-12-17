@@ -28,31 +28,31 @@ body {
 /* Login form container */
 .login-form {
   background: #fff;
-  padding: 4rem 3rem;            /* increased padding for more breathing room */
-  margin-top: -2rem;             /* move upward for balance */
-  max-width: 650px;              /* larger width to match/enhance login form */
-  width: 95%;                    /* fill more of the viewport */
-  border-radius: 16px;           /* slightly larger rounding */
-  box-shadow: 0 14px 36px rgba(0,0,0,0.15); /* deeper shadow for emphasis */
+  padding: 4rem 3rem;
+  margin-top: -2rem
+  max-width: 650px;
+  width: 95%;
+  border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.15);
   display: grid;
-  gap: 2rem;                     /* more spacing between elements */
+  gap: 2rem;
   animation: fadeInUp 0.6s ease;
 }
 
 .login-form h2 {
   text-align: center;
   font-weight: 700;
-  font-size: 2rem;               /* scaled up title */
+  font-size: 2rem;
   color: #222;
   letter-spacing: 0.5px;
 }
 
 /* Inputs */
 .login-form input {
-  padding: 0.9rem;                 /* slightly larger input fields */
+  padding: 0.9rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 1.1rem;             /* increased font size */
+  font-size: 1.1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -65,12 +65,12 @@ body {
 /* Buttons */
 .login-form button,
 .register-button {
-  padding: .8rem 1.75rem;            /* slightly larger buttons */
+  padding: .8rem 1.75rem;
   background: #1565c0;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;             /* increased font size */
+  font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -95,20 +95,20 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;             /* smaller text */
+  font-size: 1rem;
   color: #555;
 }
 
 /* Footer styles */
 .login-footer {
   text-align: center;
-  padding: 1rem;                 /* smaller footer */
-  font-size: 0.9rem;             /* reduced font size */
+  padding: 1rem;
+  font-size: 0.9rem;
   color: #444;
   margin-top: 1rem;
   background-color: #f0f0f0;
   border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12); /* matches form depth */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 /* Animations */

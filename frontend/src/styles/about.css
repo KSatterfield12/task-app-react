@@ -1,25 +1,95 @@
-.about-page {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #fdfdfd;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  color: #333;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Content page wrapper */
+.content-page {
+  flex: 1; /* fills available space between header and footer */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* About page wrapper */
+.about-page {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  margin-top: -2rem;
+  max-width: 700px;
+  width: 92%;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  display: grid;
+  gap: 1.5rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Headings */
 .about-page h2,
 .about-page h3 {
-  color: #2c3e50;
+  text-align: center;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
 }
 
+.about-page h2 {
+  font-size: 1.8rem;
+}
+
+.about-page h3 {
+  font-size: 1.4rem;
+}
+
+/* Lists */
 .about-page ul {
   padding-left: 1.2rem;
   margin-top: 0.5rem;
+  color: #555;
 }
 
 .about-page li {
   margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* Footer styles */
+.about-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Dark Mode */
@@ -35,4 +105,9 @@ body.dark-mode .about-page h3 {
 
 body.dark-mode .about-page ul {
   color: #ccc;
+}
+
+body.dark-mode .about-footer {
+  background-color: #555;
+  color: #ddd;
 }
